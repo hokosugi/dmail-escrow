@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "dmail_escrow": {
+      "main": "src/dmail_escrow/main.mo",
+      "type": "motoko"
+    },
+    "dmail_escrow_assets": {
+      "dependencies": [
+        "dmail_escrow"
+      ],
+      "frontend": {
+        "entrypoint": "src/dmail_escrow_assets/src/index.html"
+      },
+      "source": [
+        "src/dmail_escrow_assets/assets",
+        "dist/dmail_escrow_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
