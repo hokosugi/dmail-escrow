@@ -16,12 +16,20 @@
         "dist/dmail_escrow_assets/"
       ],
       "type": "assets"
+    },
+    "ledger": {
+      "type": "custom",
+      "wasm": "ledger.wasm",
+      "candid": "ledger.public.did"
     }
   },
   "defaults": {
     "build": {
       "args": "",
       "packtool": ""
+    },
+    "replica": {
+      "subnet_type": "system"
     }
   },
   "dfx": "0.9.3",
